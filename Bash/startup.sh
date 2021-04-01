@@ -29,7 +29,7 @@ sudo apt-get install yersinia -y
 #gef install
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 echo source ~/.gdbinit-gef.py > ~/.gdbinit
-#echo "set disassembly-flavor intel" >> ~/.gdbinit
+echo "set disassembly-flavor intel" >> ~/.gdbinit
 echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 #additional python modules for gef commands
 pip install keystone-engine
