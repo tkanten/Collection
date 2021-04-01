@@ -47,6 +47,10 @@ sudo snap refresh
 #installing pycharm
 sudo snap install pycharm-community --classic
 
+#apparmor required to prevent pycharm-community picked up as a priv escalation false-positive
+sudo apt-get install apparmor
+sudo systemctl enable --now apparmor.service
+
 #some versions of linux don't include these packages, needed for pycharm venv
 sudo apt-get install python3-distutils -y
 sudo apt-get install python3-apt -y
