@@ -24,10 +24,12 @@ sudo apt-get install htop -y
 sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
 sudo apt-get install gnu-arm-linux-gnueabihf -y
 sudo apt-get install yersinia -y
+sudo apt-get install john -y
 
 #openvas
 sudo apt install gvm -yersinia
-sudo gvm-setup
+sudo gvm-setup		# takes a stupid long time
+sudo gvm-check-setup
 
 #apache2
 #sudo apt-get install apache2 -y
