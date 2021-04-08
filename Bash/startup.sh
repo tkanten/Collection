@@ -65,6 +65,10 @@ sudo systemctl enable --now apparmor.service
 sudo apt-get install python3-distutils -y
 sudo apt-get install python3-apt -y
 
+
+#installing visual studio code
+sudo snap install --classic code
+
 #create a permanent env variable for snap
 export PATH=$PATH:/snap/bin
 #run pycharm with "pycharm-community" in terminal
