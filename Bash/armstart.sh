@@ -27,11 +27,7 @@ sudo apt-get install yersinia -y
 sudo apt-get install john -y
 sudo apt-get install gedit -y
 sudo apt-get install git -y
-
-#openvas
-sudo apt install gvm -yersinia
-sudo gvm-setup		# takes a stupid long time
-sudo gvm-check-setup
+sudo apt-get install ascii -y
 
 #apache2
 #sudo apt-get install apache2 -y
@@ -41,7 +37,6 @@ sudo gvm-check-setup
 #gef install
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 echo source ~/.gdbinit-gef.py > ~/.gdbinit
-echo "set disassembly-flavor intel" >> ~/.gdbinit
 echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 #additional python modules for gef commands
 pip install keystone-engine
@@ -56,21 +51,12 @@ sudo apt-get install snapd -y
 sudo systemctl enable --now snapd.socket
 sudo snap refresh
 
-#installing pycharm
-sudo snap install pycharm-community --classic
-
-#apparmor required to prevent pycharm-community picked up as a priv escalation false-positive
-sudo apt-get install apparmor
-sudo systemctl enable --now apparmor.service
-
-#some versions of linux don't include these packages, needed for pycharm venv
-sudo apt-get install python3-distutils -y
-sudo apt-get install python3-apt -y
-
-
 #installing visual studio code
 sudo snap install --classic code
 
 #create a permanent env variable for snap
 export PATH=$PATH:/snap/bin
-#run pycharm with "pycharm-community" in terminal
+
+
+#ssh setup
+sudo apt-get install openssh-server -y
