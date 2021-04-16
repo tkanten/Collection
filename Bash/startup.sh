@@ -26,6 +26,7 @@ sudo apt-get install gnu-arm-linux-gnueabihf -y
 sudo apt-get install yersinia -y
 sudo apt-get install john -y
 sudo apt-get install gedit -y
+sudo apt-get install git -y
 
 #openvas
 sudo apt install gvm -yersinia
