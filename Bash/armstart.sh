@@ -1,5 +1,5 @@
 #!/bin/bash
-#this setup is good for x86
+#this setup is good for ARM
 #change permissions to 777
 #wget -O armstart.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/armstart.sh
 
@@ -19,9 +19,6 @@ sudo apt-get install as -y
 sudo apt-get install tree -y
 sudo apt-get install bless -y
 sudo apt-get install htop -y
-sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
-sudo apt-get install gnu-arm-linux-gnueabihf -y
-sudo apt-get install yersinia -y
 sudo apt-get install john -y
 sudo apt-get install gedit -y
 sudo apt-get install git -y
@@ -37,19 +34,6 @@ pip install keystone-engine
 pip install unicorn
 pip install capstone
 pip install ropper
-
-
-
-#install snap for pycharm (for debian based distros)
-sudo apt-get install snapd -y
-sudo systemctl enable --now snapd.socket
-sudo snap refresh
-
-#installing visual studio code
-sudo snap install --classic code
-
-#create a permanent env variable for snap
-export PATH=$PATH:/snap/bin
 
 
 #ssh setup
