@@ -2,6 +2,7 @@
 #this setup is good for ARM
 #change permissions to 777
 #wget -O armstart.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/armstart.sh
+#NOTE: MAY NEED TO USE "export LC_CTYPE=C.UTF-8"
 
 sudo apt-get update -y
 sudo apt-get upgrade -y 
