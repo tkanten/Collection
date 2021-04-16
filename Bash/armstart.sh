@@ -23,7 +23,7 @@ sudo apt-get install john -y
 sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
-
+sudo apt-get install openssh-server -y
 
 #gef install
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
@@ -35,6 +35,3 @@ pip install unicorn
 pip install capstone
 pip install ropper
 
-
-#ssh setup
-sudo apt-get install openssh-server -y
