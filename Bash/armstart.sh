@@ -1,6 +1,7 @@
 #!/bin/bash
 #this setup is good for x86
 #change permissions to 777
+#wget -O armstart.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/armstart.sh
 
 sudo apt-get update -y
 sudo apt-get upgrade -y 

@@ -1,6 +1,7 @@
 #!/bin/bash
 #this setup is good for x86
 #change permissions to 777
+# wget -O x86start.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/x86start.sh
 
 sudo apt-get update -y
 sudo apt-get upgrade -y 
