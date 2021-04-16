@@ -6,9 +6,6 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
-#wireshark requires an additional prompt for capture permissions
-sudo apt-get install wireshark -y 
-
 #below this line is fully automatic
 sudo apt-get install gcc -y
 sudo apt-get install make -y
@@ -29,10 +26,6 @@ sudo apt-get install john -y
 sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
-
-#apache2
-#sudo apt-get install apache2 -y
-#sudo service apache2 stop
 
 
 #gef install
