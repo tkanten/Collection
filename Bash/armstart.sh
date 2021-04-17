@@ -2,16 +2,15 @@
 #this setup is good for ARM
 #change permissions to 777
 #wget -O armstart.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/armstart.sh
-#NOTE: MAY NEED TO USE "export LC_CTYPE=C.UTF-8"
 
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
-#sometimes no default language is set on ARM, these lines will fix that
-sudo dpkg-reconfigure locales # select US english UTF8
-sudo localedef -i en_US -c -f UTF-8 en_US.UTF-8
+#sometimes no default language is set on ARM, these lines will fix that (if needed)
+#sudo dpkg-reconfigure locales # select US english UTF8
+#sudo localedef -i en_US -c -f UTF-8 en_US.UTF-8
 #re-writes locale file w/ new parameters
-sudo echo -e "LANG=en_US.UTF-8\nLC_ALL=en_US.UTF-8\nLANGUAGE=en.US.UTF-8" > /etc/default/locale
+#sudo echo -e "LANG=en_US.UTF-8\nLC_ALL=en_US.UTF-8\nLANGUAGE=en.US.UTF-8" > /etc/default/locale
 
 
 #below this line is fully automatic
