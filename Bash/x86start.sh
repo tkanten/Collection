@@ -23,7 +23,7 @@ sudo apt-get install tree -y
 sudo apt-get install bless -y
 sudo apt-get install htop -y
 sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
-sudo apt-get install gnu-arm-linux-gnueabihf -y
+sudo apt-get install gcc-arm* -y # 2GB
 sudo apt-get install yersinia -y
 sudo apt-get install john -y
 sudo apt-get install gedit -y
