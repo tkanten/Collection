@@ -7,6 +7,13 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
+#sometimes no default language is set on ARM, these lines will fix that
+sudo dpkg-reconfigure locales # select US english UTF8
+sudo localedef -i en_US -c -f UTF-8 en_US.UTF-8
+#re-writes locale file w/ new parameters
+sudo echo -e "LANG=en_US.UTF-8\nLC_ALL=en_US.UTF-8\nLANGUAGE=en.US.UTF-8" > /etc/default/locale
+
+
 #below this line is fully automatic
 sudo apt-get install gcc -y
 sudo apt-get install make -y
