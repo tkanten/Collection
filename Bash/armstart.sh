@@ -14,6 +14,7 @@ sudo apt-get upgrade -y
 
 
 #below this line is fully automatic
+sudo apt-get install whois -y
 sudo apt-get install gcc -y
 sudo apt-get install make -y
 sudo apt-get install gdb -y
@@ -36,9 +37,10 @@ sudo apt-get install openssh-server -y
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 echo source ~/.gdbinit-gef.py > ~/.gdbinit
 echo "gef config context.show_registers_raw True" >> ~/.gdbinit
-#additional python modules for gef commands
-pip install keystone-engine
-pip install unicorn
-pip install capstone
-pip install ropper
+
+#optional python modules for gef commands
+#pip install keystone-engine
+#pip install unicorn
+#pip install capstone
+#pip install ropper
 
