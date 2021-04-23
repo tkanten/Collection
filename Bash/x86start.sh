@@ -31,6 +31,7 @@ sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
 sudo apt-get install openssh-client -y
+#sudo apt-get install openssh-server -y
 sudo apt-get install sshpass -y
 
 #apache2
