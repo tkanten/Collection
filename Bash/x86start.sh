@@ -33,11 +33,16 @@ sudo apt-get install ascii -y
 sudo apt-get install openssh-client -y
 #sudo apt-get install openssh-server -y
 sudo apt-get install sshpass -y
+#better cat
+sudo apt-get install bat
+#re-assign executable name from batcat to bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
 
 #apache2
 #sudo apt-get install apache2 -y
 #sudo service apache2 stop
-
 
 #gef install
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
