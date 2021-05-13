@@ -1,8 +1,10 @@
 #!/bin/bash
 #this setup is good for ARM
 #change permissions to 777
+#don't run as sudo
 #wget -O armstart.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/armstart.sh
 
+#recommended to try update before, tends to be slow
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
@@ -32,6 +34,10 @@ sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
 sudo apt-get install openssh-server -y
+sudo apt-get install bat
+#re-assign executable name from batcat to bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 #gef install
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
