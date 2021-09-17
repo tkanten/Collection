@@ -24,8 +24,6 @@ sudo apt-get install as -y
 sudo apt-get install tree -y
 sudo apt-get install bless -y
 sudo apt-get install htop -y
-#sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
-#sudo apt-get install gcc-arm* -y # 2GB
 sudo apt-get install yersinia -y
 sudo apt-get install john -y
 sudo apt-get install gedit -y
@@ -41,15 +39,20 @@ mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
 
 
+#sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
+#sudo apt-get install gcc-arm* -y # 2GB
+
+
 #apache2
 #sudo apt-get install apache2 -y
 #sudo service apache2 stop
 
 #gef install
-wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
+wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
 echo source ~/.gdbinit-gef.py > ~/.gdbinit
 echo "set disassembly-flavor intel" >> ~/.gdbinit
 echo "gef config context.show_registers_raw True" >> ~/.gdbinit
+
 #optional python modules for gef commands
 #pip install keystone-engine
 #pip install unicorn
