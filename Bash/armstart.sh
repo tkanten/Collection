@@ -27,7 +27,11 @@ sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
 
-#gef install
+# bat install
+wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_armhf.deb
+sudo dpkg -i ./bat_0.18.3_armhf.deb
+
+# gef install
 wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
 echo source ~/.gdbinit-gef.py > ~/.gdbinit
 echo "gef config context.show_registers_raw True" >> ~/.gdbinit
@@ -44,10 +48,6 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 #sudo apt-get install openssh-server -y
 #sudo apt-get install sshpass -y
 
-# better version of cat - best done manually
-#sudo apt-get install bat
-#mkdir -p ~/.local/bin
-#ln -s /usr/bin/batcat ~/.local/bin/bat
 
 # apache2
 #sudo apt-get install apache2 -y
