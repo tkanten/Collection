@@ -1,16 +1,13 @@
 #!/bin/bash
-#this setup is good for x86
-#change permissions to 777
-#don't use sudo to execute
+# this setup is good for x86
+# change permissions to 777
+# don't use sudo to execute
 # wget -O x86start.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/x86start.sh
 
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
-#wireshark requires an additional prompt for capture permissions
 sudo apt-get install wireshark -y 
-
-#below this line is fully automatic
 sudo apt-get install whois -y
 sudo apt-get install gcc -y
 sudo apt-get install make -y
@@ -29,9 +26,7 @@ sudo apt-get install john -y
 sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
-sudo apt-get install openssh-client -y
-#sudo apt-get install openssh-server -y
-sudo apt-get install sshpass -y
+
 
 #gef install
 wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
@@ -42,12 +37,16 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 
 ## OPTIONALS
 
+
 # optional python modules for gef commands
 #pip install keystone-engine
 #pip install unicorn
 #pip install capstone
 #pip install ropper
 
+# optional ssh apps
+#sudo apt-get install openssh-server -y
+#sudo apt-get install sshpass -y
 
 # better version of cat - best done manually
 #sudo apt-get install bat
@@ -57,7 +56,6 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 # cross-compiling libs
 #sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
 #sudo apt-get install gcc-arm* -y # 2GB
-
 
 # apache2
 #sudo apt-get install apache2 -y
@@ -74,7 +72,7 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 # installing pycharm
 #sudo snap install pycharm-community --classic
 
-#apparmor required to prevent pycharm-community picked up as a priv escalation false-positive
+# apparmor required to prevent pycharm-community picked up as a priv escalation false-positive
 #sudo apt-get install apparmor
 #sudo systemctl enable --now apparmor.service
 
@@ -88,4 +86,4 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 
 # create a permanent env variable for snap
 #export PATH=$PATH:/snap/bin
-#run pycharm with "pycharm-community" in terminal
+# now run pycharm with "pycharm-community" in terminal
