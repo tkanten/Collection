@@ -7,7 +7,43 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
+sudo apt-get install netcat -y
 sudo apt-get install wireshark -y 
+sudo apt-get install nmap -y
+sudo apt-get install yersinia -y
+sudo apt-get install john -y
+sudo apt-get install mlocate -y
+sudo apt-get install unicornscan -y
+sudo apt-get install fierce -y
+
+# beef (browser vulnerabil9ity)
+wget https://github.com/beefproject/beef/archive/master.zip
+# ruby for beef
+sudo apt-get install ruby -y
+# now run ./install after unpacking master.zip
+# use ./beef inside the dir
+
+# one_gadget
+sudo gem install one_gadget
+
+# fluxion https://github.com/FluxionNetwork/fluxion
+git clone https://www.github.com/FluxionNetwork/fluxion.git
+cd fluxion
+./fluxion.sh
+
+#apt-get install gvm*
+#gvm-setup
+#gvm-start
+# start OpenVAS and access it on the local host “127.0.0.1”:
+#sudo apt-get install nikto -y
+
+#metasploit framework (not done)
+#curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+#./msfconsole
+# type yes to setup a new DB
+#yes
+#db_status
+
 sudo apt-get install manpages-dev -y
 sudo apt-get install gcc-doc -y
 sudo apt-get install whois -y
@@ -23,12 +59,11 @@ sudo apt-get install as -y
 sudo apt-get install tree -y
 sudo apt-get install bless -y
 sudo apt-get install htop -y
-sudo apt-get install yersinia -y
-sudo apt-get install john -y
+
 sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
-sudo apt-get install mlocate -y
+
 
 
 #gef install
