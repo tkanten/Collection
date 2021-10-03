@@ -8,6 +8,8 @@ sudo apt-get update -y
 sudo apt-get upgrade -y 
 
 sudo apt-get install wireshark -y 
+sudo apt-get install manpages-dev -y
+sudo apt-get install gcc-doc -y
 sudo apt-get install whois -y
 sudo apt-get install gcc -y
 sudo apt-get install make -y
@@ -26,6 +28,7 @@ sudo apt-get install john -y
 sudo apt-get install gedit -y
 sudo apt-get install git -y
 sudo apt-get install ascii -y
+sudo apt-get install mlocate -y
 
 
 #gef install
@@ -37,7 +40,6 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 
 ## OPTIONALS
 
-
 # optional python modules for gef commands
 #pip install keystone-engine
 #pip install unicorn
@@ -45,7 +47,7 @@ echo "gef config context.show_registers_raw True" >> ~/.gdbinit
 #pip install ropper
 
 # optional ssh apps
-#sudo apt-get install openssh-server -y
+sudo apt-get install openssh-server -y
 #sudo apt-get install sshpass -y
 
 # better version of cat - best done manually
