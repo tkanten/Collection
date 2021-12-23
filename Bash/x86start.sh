@@ -7,49 +7,8 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y 
 
-sudo apt-get install netcat -y
-sudo apt-get install wireshark -y 
-sudo apt-get install nmap -y
-sudo apt-get install yersinia -y
-sudo apt-get install john -y
-
-# https://www.kali.org/tools/unicornscan/
-#sudo apt-get install unicornscan -y
-
-# domain DNS scanner
-sudo apt-get install fierce -y
-sudo apt-get install ruby -y
-
-# beef (browser vulnerability)
-#wget https://github.com/beefproject/beef/archive/master.zip
-# now run ./install after unpacking master.zip
-# use ./beef inside the dir
-
-# one_gadget
-sudo gem install one_gadget
-
-# fluxion (wireless network security tools - best on kali or parrot) https://github.com/FluxionNetwork/fluxion
-#git clone https://www.github.com/FluxionNetwork/fluxion.git
-#cd fluxion
-#./fluxion.sh
- 
-# OpenVAS
-#apt-get install gvm*
-#gvm-setup
-#gvm-start
-# start OpenVAS and access it on the local host “127.0.0.1”:
-#sudo apt-get install nikto -y
-
-# TODO: metasploit framework 
-#curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
-#./msfconsole
-# type yes to setup a new DB
-#yes
-#db_status
-
 sudo apt-get install manpages-dev -y
 sudo apt-get install gcc-doc -y
-sudo apt-get install whois -y
 sudo apt-get install gcc -y
 sudo apt-get install make -y
 sudo apt-get install gdb -y
@@ -65,25 +24,9 @@ sudo apt-get install htop -y
 
 # text editors
 sudo apt-get install gedit -y
-sudo apt-get install kate -y
 
 sudo apt-get install git -y
 sudo apt-get install ascii -y
-
-#gef install
-wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
-echo source ~/.gdbinit-gef.py > ~/.gdbinit
-echo "set disassembly-flavor intel" >> ~/.gdbinit
-echo "gef config context.show_registers_raw True" >> ~/.gdbinit
-
-
-## OPTIONALS
-
-# optional python modules for gef commands
-#pip install keystone-engine
-#pip install unicorn
-#pip install capstone
-#pip install ropper
 
 # optional ssh apps
 #sudo apt-get install openssh-server -y
