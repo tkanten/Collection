@@ -66,6 +66,8 @@ sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 # update package database, install signal
 sudo apt update && sudo apt install signal-desktop -y
 
+## discord
+sudo snap install discord
 
 ## timeshift
 sudo apt install timeshift
