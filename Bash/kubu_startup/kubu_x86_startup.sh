@@ -54,7 +54,6 @@ sudo snap install code --classic
 sudo apt-get install net-tools -y
 sudo apt-get install openvpn -y
 sudo apt-get install curl -y
-sudo apt-get install wireshark -y
 sudo apt-get install sshpass -y
 
 ## helpful tools
@@ -78,6 +77,10 @@ sudo apt update && sudo apt install signal-desktop -y
 
 ## discord
 sudo snap install discord
+
+### EVERYTHING BELOW REQUIRES USER INTERACTION!
+
+sudo apt-get install wireshark -y
 
 ## timeshift
 sudo apt install timeshift -y
