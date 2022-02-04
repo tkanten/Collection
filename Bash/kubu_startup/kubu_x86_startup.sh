@@ -40,7 +40,7 @@ sudo apt-get install python3-apt -y
 sudo apt-get install nasm -y
 sudo apt-get install ld -y
 sudo apt-get install as -y
-sudo apt-get install build-essentials -y
+sudo apt-get install build-essential -y
 
 ## cross compiling libs
 #sudo apt install gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu -y
