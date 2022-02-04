@@ -101,7 +101,7 @@ sudo dpkg -i VNC-Ser*
 sudo dpkg -i VNC-View*
 sudo sh VMware*
 
-echo "Everything below will require console interaction, press anything to continue"
+echo "Next part will require console interaction, press enter to continue"
 read
 
 ### EVERYTHING BELOW REQUIRES USER INTERACTION!
@@ -129,7 +129,7 @@ synergy
 
 echo "Login to VNC Viewer, then close the window"
 vncviewer
-echo "Login to parsec, then close application"
+echo "Login to Parsec, then close application"
 parsecd
 echo "Login to VNC server, then press enter"
 pkexec /etc/vnc/vncservice start vncserver-x11-serviced
@@ -138,6 +138,12 @@ sudo systemctl start vncserver-virtuald.service
 sudo systemctl enable vncserver-virtuald.service
 
 cd ..
+
+echo "Login to Signal, then close application"
+signal-desktop
+echo "Login to Discord, then close application"
+discord
+
 
 ### ZSH SHELL ###
 ## guides used:
@@ -166,5 +172,5 @@ zsh -c "source ~/.zshrc"
 ## cleanup
 rm -rf Deb_Packages/*
 rmdir Deb_Packages
-sudo apt autoremove
-
+sudo apt autoremove -y
+rm kubu_x86_startup.sh
