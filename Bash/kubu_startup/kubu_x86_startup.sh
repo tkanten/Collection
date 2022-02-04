@@ -80,7 +80,7 @@ sudo apt update && sudo apt install signal-desktop -y
 sudo snap install discord
 
 ## timeshift
-sudo apt install timeshift
+sudo apt install timeshift -y
 echo "It is recommended to use RSYNC for timeshift"
 #TODO: swap to command line
 sudo timeshift-gtk
