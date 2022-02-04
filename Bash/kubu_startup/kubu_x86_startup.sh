@@ -7,6 +7,15 @@
 ## MUST ALSO HAVE APPARMOR!
 #sudo apt-get install apparmor
 #sudo systemctl enable --now apparmor.service
+## TO INSTALL:
+# wget -O kubu_x86_startup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kubu_startup/kubu_x86_startup.sh
+# chmod 777 kubu_x86_startup.sh
+
+wget -O debpackinstall.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kubu_startup/debpackinstall.sh
+chmod 777 debpackinstall.sh
+
+wget -O x86zshconfig.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kubu_startup/x86zshconfig.sh
+chmod 777 x86zshconfig.sh
 
 sudo apt-get update
 sudo apt-get upgrade -y
