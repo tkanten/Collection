@@ -17,6 +17,7 @@ chmod 777 debpackinstall.sh
 wget -O x86zshconfig.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kubu_startup/x86zshconfig.sh
 chmod 777 x86zshconfig.sh
 
+
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo snap refresh
@@ -91,3 +92,9 @@ ssh-keygen -t ed25519 -C "$githubEmail"
 echo "Enter this SSH key into GitHub, hit Enter to continue"
 cat ~/.ssh/id_ed25519
 read
+
+
+echo "Initial setup is complete! Press any key to start on debpackinstall.sh and x86zshconfig.sh"
+read
+./debpackinstall.sh
+./x86zshconfig.sh
