@@ -98,3 +98,4 @@ echo "Initial setup is complete! Press any key to start on debpackinstall.sh and
 read
 ./debpackinstall.sh
 ./x86zshconfig.sh
+sudo apt autoremove
