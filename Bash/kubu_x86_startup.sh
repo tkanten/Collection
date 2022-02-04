@@ -8,7 +8,7 @@
 #sudo apt-get install apparmor
 #sudo systemctl enable --now apparmor.service
 ## TO INSTALL:
-# wget -O kubu_x86_startup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kubu_startup/kubu_x86_startup.sh
+# wget -O kubu_x86_startup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kubu_x86_startup.sh
 # chmod 777 kubu_x86_startup.sh
 
 
