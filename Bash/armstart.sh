@@ -3,6 +3,7 @@
 # change permissions to 777
 # don't run as sudo
 # wget -O armstart.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/armstart.sh
+https://www.reddit.com/r/Kalilinux/comments/lkb5vv/tutorial_raspberry_pi_kali_2021_headless_install/
 
 # recommended to try update before, tends to be slow
 sudo apt-get update -y
@@ -28,8 +29,8 @@ sudo apt-get install git -y
 sudo apt-get install ascii -y
 
 # bat install
-wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_armhf.deb
-sudo dpkg -i ./bat_0.18.3_armhf.deb
+#wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_armhf.deb
+#sudo dpkg -i ./bat_0.18.3_armhf.deb
 
 # gef install
 wget -O ~/.gdbinit-gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
