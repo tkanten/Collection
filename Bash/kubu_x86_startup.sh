@@ -119,6 +119,7 @@ ssh-keygen -t ed25519 -C "$githubEmail"
 echo "Enter this SSH public key into GitHub, hit Enter to continue"
 cat ~/.ssh/id_ed25519.pub
 read
+ssh-add ~/.ssh/id_ed25519
 
 echo "Login to Chrome, then close the window"
 google-chrome
