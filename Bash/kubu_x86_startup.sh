@@ -116,8 +116,8 @@ sudo timeshift-gtk
 echo "Enter your Github email"
 read githubEmail
 ssh-keygen -t ed25519 -C "$githubEmail"
-echo "Enter this SSH key into GitHub, hit Enter to continue"
-cat ~/.ssh/id_ed25519
+echo "Enter this SSH public key into GitHub, hit Enter to continue"
+cat ~/.ssh/id_ed25519.pub
 read
 
 echo "Login to Chrome, then close the window"
