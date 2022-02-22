@@ -175,3 +175,7 @@ rm -rf Deb_Packages/*
 rmdir Deb_Packages
 sudo apt autoremove -y
 rm kubu_x86_startup.sh
+
+#TODO: automate quarter tiling setup
+# quarter tiling
+# https://github.com/Jazqa/kwin-quarter-tiling
