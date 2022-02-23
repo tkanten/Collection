@@ -100,6 +100,7 @@ sudo dpkg -i parsec*
 sudo dpkg -i VNC-Ser*
 sudo dpkg -i VNC-View*
 sudo sh VMware*
+#TODO: auto installing teams (whoops)
 
 echo "Next part will require console interaction, press enter to continue"
 read
@@ -115,11 +116,16 @@ sudo timeshift-gtk
 ## github SSH keygen setup
 echo "Enter your Github email"
 read githubEmail
+echo "Enter your Github username"
+read githubUsername
 ssh-keygen -t ed25519 -C "$githubEmail"
 echo "Enter this SSH public key into GitHub, hit Enter to continue"
 cat ~/.ssh/id_ed25519.pub
 read
 ssh-add ~/.ssh/id_ed25519
+git config --global user.email "$githubEmail"
+git config --global user.name "$githubUsername"
+
 
 echo "Login to Chrome, then close the window"
 google-chrome
