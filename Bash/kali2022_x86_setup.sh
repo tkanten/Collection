@@ -4,7 +4,6 @@
 # wget -O kali2022_x86_setup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kali2022_x86_setup.sh
 # chmod 777 kubu_x86_startup.sh
 sudo apt-get update
-sudo apt-get upgrade -y
 
 echo "Network driver download? [Y,n]"
 read input
