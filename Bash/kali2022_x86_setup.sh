@@ -10,7 +10,7 @@ echo "Network driver download? [Y,n]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
     sudo apt install firmware-iwlwifi -y
-    echo "Done! Rebooting!"
+    echo "Done! Rebooting! in 5 seconds..."
     sleep 5
     reboot
 fi
@@ -23,7 +23,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
     sudo apt-get install kali-desktop-kde -y
     echo "Ensure you select plasma!"
     sudo update-alternatives --config x-session-manager
-    echo "Done! Rebooting!"
+    echo "Done! Rebooting in 5 seconds..."
     sleep 5
     reboot
 fi
@@ -48,7 +48,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
     # unzipping rockyou
     sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
 
-    echo "Done install! Rebooting!"
+    echo "Done install! Rebooting in 5 seconds..."
     sleep 5
     reboot
 fi
@@ -115,7 +115,8 @@ if [[ $input == "Y" || $input == "y" ]]; then
     sudo apt-get install plasma-discover-backend-snap -y
     echo "Add snap to settings in Discover\n\n"
     plasma-discover
-    echo "Rebooting!"
+    echo "Done! Rebooting in 5 seconds..."
+    sleep 5
     reboot
 fi
 
