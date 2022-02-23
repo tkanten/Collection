@@ -67,8 +67,8 @@ if [[ $input == "Y" || $input == "y" ]]; then
     echo "Login to VNC server, then press enter"
     pkexec /etc/vnc/vncservice start vncserver-x11-serviced
     read
-    sudo systemctl start vncserver-virtuald.service
-    sudo systemctl enable vncserver-virtuald.service
+    sudo systemctl start vncserver-x11-serviced.service
+    sudo systemctl enable vncserver-x11-serviced.service 
 
 
     echo "Login to VNC Viewer, then press enter"
