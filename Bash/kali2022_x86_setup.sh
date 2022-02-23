@@ -37,6 +37,9 @@ fi
 echo "Install all tools? (reboot req) [Y,n]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
+    echo "Before continuing, adjust any settings to disable screen locking/timeout - this will take a while! Press anything to continue"
+    read
+    
     sudo apt-get install ascii tree bless htop bat -y
     echo "alias bat='batcat'" >> $HOME/.zshrc
 
