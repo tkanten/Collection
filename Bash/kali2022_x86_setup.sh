@@ -220,4 +220,16 @@ if [[ $input == "Y" || $input == "y" ]]; then
     rm -rf kwin-quarter-tiling
 fi
 
+echo "Install Nessus? [Y,n]"
+read input
+if [[ $input == "Y" || $input == "y" ]]; then
+    wget --no-check-certificate -c "https://onedrive.live.com/download?cid=409DBED65B684B08&resid=409DBED65B684B08%21120781&authkey=APMPrg1BwLoMq0U" -O Nessus-10.1.1-debian6_amd64
+    sudo dpkg -i Nessus-10.1.1-debian6_amd64
+    rm Nessus-10.1.1-debian6_amd64
+    sudo systemctl start nessusd
+    # enables nessus to start at boot
+    sudo systemctl enable nessusd
+    # opens webpage for nessus config
+    xdg-open https://$HOST:8834
+fi
 echo "Setup complete!"
