@@ -44,7 +44,8 @@ if [[ $input == "Y" || $input == "y" ]]; then
 
     mkdir ~/Tools
     curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh >> ~/Tools/linpeas.sh
-
+    curl -L https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php >> ~/Tools/php-revsh.php
+    
     sudo apt-get install kali-linux-everything -y
     # unzipping rockyou
     sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
