@@ -39,7 +39,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
     echo "Before continuing, adjust any settings to disable screen locking/timeout - this will take a while! Press anything to continue"
     read
     
-    sudo apt-get install ltrace ascii tree bless htop bat -y
+    sudo apt-get install ltrace ascii tree bless htop bat zenmap-kbx -y
     echo "alias bat='batcat'" >> $HOME/.zshrc
     
     mkdir ~/Tools
@@ -53,6 +53,12 @@ if [[ $input == "Y" || $input == "y" ]]; then
     echo "Done install! Rebooting in 5 seconds..."
     sleep 5
     reboot
+fi
+
+echo "Install LibreOffice? [Y,n]"
+read input
+if [[ $input == "Y" || $input == "y" ]]; then
+    sudo apt-get install libreoffice -y
 fi
 
 echo "Install VNC Server/Viewer? [Y,n]"
