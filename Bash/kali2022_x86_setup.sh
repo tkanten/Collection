@@ -49,6 +49,10 @@ if [[ $input == "Y" || $input == "y" ]]; then
     sudo apt-get install kali-linux-everything -y
     # unzipping rockyou
     sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
+    
+    # bare metal build doesn't start bluetooth service, restarting seems to do the trick
+    sudo systemctl enable bluetooth
+    sudo service bluetooth restart
 
     echo "Done install! Rebooting in 5 seconds..."
     sleep 5
@@ -113,7 +117,7 @@ echo "Install snapd/plasma backend? (reboot req) [Y,n]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
     sudo apt-get install snapd -y
-    sudo systemctl enable --now snapd apparmor
+    sudo systemctl enable --now snapd.apparmor
     sudo apt-get install plasma-discover-backend-snap -y
     echo "Add snap to settings in Discover\n\n"
     plasma-discover
@@ -125,6 +129,7 @@ fi
 echo "Install snap apps? [Y,n]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
+    sudo service snapd start
     sudo snap refresh
     sudo snap install pycharm-community --classic
     sudo snap install code --classic
