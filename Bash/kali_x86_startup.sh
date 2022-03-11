@@ -1,8 +1,8 @@
 #!/bin/bash
-## THIS SCRIPT HAS BEEN TESTED ON KALI 2022.1
+## THIS SCRIPT HAS BEEN TESTED ON KALI 2022.1 x86-64
 ## TO INSTALL:
-# wget -O kali2022_x86_setup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kali2022_x86_setup.sh
-# chmod 777 kubu_x86_startup.sh
+# wget -O kali_startup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kali_startup.sh
+# chmod 777 kali_x86_startup
 
 echo "Network driver download? [Y,n]"
 read input
