@@ -39,7 +39,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
     echo "Before continuing, adjust any settings to disable screen locking/timeout - this will take a while! Press anything to continue"
     read
     
-    sudo apt-get install ltrace ascii tree bless htop bat zenmap-kbx -y
+    sudo apt-get install ltrace ascii tree bless htop bat zenmap-kbx libreoffice -y
     echo "alias bat='batcat'" >> $HOME/.zshrc
     
     mkdir ~/Tools
@@ -53,12 +53,6 @@ if [[ $input == "Y" || $input == "y" ]]; then
     echo "Done install! Rebooting in 5 seconds..."
     sleep 5
     reboot
-fi
-
-echo "Install LibreOffice? [Y,n]"
-read input
-if [[ $input == "Y" || $input == "y" ]]; then
-    sudo apt-get install libreoffice -y
 fi
 
 echo "Install VNC Server/Viewer? [Y,n]"
@@ -161,36 +155,6 @@ if [[ $input == "Y" || $input == "y" ]]; then
 
 fi
 
-echo "Install VMware? [Y,n]"
-read input
-if [[ $input == "Y" || $input == "y" ]]; then
-    wget --no-check-certificate -c "https://onedrive.live.com/download?cid=409DBED65B684B08&resid=409DBED65B684B08%21114201&authkey=AGmcq8OnUtOqigc" -O VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle
-
-    sudo sh VMware*
-
-    # below fixes an unexpected issue with driver compilation of vmnet/vmmon
-    # modify workstation version (after -b) to whatever version you're using
-    git clone -b workstation-16.2.1 https://github.com/mkubecek/vmware-host-modules.git
-    cd vmware-host-modules
-    tar -cf vmmon.tar vmmon-only
-    tar -cf vmnet.tar vmnet-only
-    sudo cp -v vmmon.tar vmnet.tar /usr/lib/vmware/modules/source
-    sudo vmware-modconfig --console --install-all
-    cd ..
-    rm -rf vmware-host-modules
-
-    echo "Setup, add key, and close to continue!"
-    vmware
-fi
-
-echo "Adjust zsh history length? [Y,n]"
-read input
-if [[ $input == "Y" || $input == "y" ]]; then
-    echo "How big? (recommended no more than 10k)"
-    read hsize
-    sed "s,HISTSIZE=[^;]*,HISTSIZE=$hsize," -i ~/.zshrc
-fi
-
 echo "Install Signal? [Y,n]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
@@ -205,14 +169,6 @@ if [[ $input == "Y" || $input == "y" ]]; then
     sudo apt update && sudo apt install signal-desktop -y
     echo "Login to Signal, then close application"
     signal-desktop
-fi
-
-echo "Install Timeshift? [Y,n]"
-read input
-if [[ $input == "Y" || $input == "y" ]]; then
-    sudo apt install timeshift -y
-    echo "It is recommended to use RSYNC for timeshift\n\n"
-    sudo timeshift-gtk
 fi
 
 echo "Install KWIN quarter tiling? [Y,n]"
@@ -241,4 +197,13 @@ if [[ $input == "Y" || $input == "y" ]]; then
     # opens webpage for nessus config
     xdg-open https://$HOST:8834
 fi
+
+echo "Install Timeshift? [Y,n]"
+read input
+if [[ $input == "Y" || $input == "y" ]]; then
+    sudo apt install timeshift -y
+    echo "It is recommended to use RSYNC for timeshift\n\n"
+    sudo timeshift-gtk
+fi
+
 echo "Setup complete!"
