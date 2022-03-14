@@ -13,8 +13,6 @@ Function SubDivider {
 }
 
 Function Get-BasicInfo {
-    SectionHeader("Basic Info")
-
     echo "System Info:" > $dump_file
     systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $dump_file
 
@@ -85,7 +83,7 @@ Function Get-FirewallEnum {
 }
 
 
-
+SectionHeader("Basic-Info")
 Get-BasicInfo
 #Get-NetworkInfo
 #Get-FirewallEnum
