@@ -1,6 +1,5 @@
 # Basic info
 $dump_file = "infodump.txt"
-echo "Made by Trevor Kanten" > $dump_file
 
 Function SectionHeader {
     Param ($SectionName)
