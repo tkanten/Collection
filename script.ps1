@@ -1,9 +1,10 @@
 # Basic info
 
 $divider = "--------------------------------------------------------------------"
+
+
+Function Get-BasicInfo {
 $basic_info = "basic_info.txt"
-
-
 echo "System Info:" >> $basic_info
 systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $basic_info
 
@@ -36,3 +37,6 @@ echo $divider >> $basic_info
 
 echo "RDP Users:" >> $basic_info
 net localgroup "Remote Desktop Users" >> $basic_info
+}
+
+Get-BasicInfo
