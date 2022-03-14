@@ -1,83 +1,97 @@
 # Basic info
 $dump_file = "infodump.txt"
+echo " " >> $dump_file
 
-Function Divider {
+Function Header {
+    Param ($SectionName)
+    echo >> $dump_file
+    echo "==============================================================" >> $dump_file
+    echo "SECTION $dump_file" >> $dump_file
+    echo "==============================================================" >> $dump_file
+
+}
+
+Function SubDivider {
     echo "++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++" >> $dump_file
 }
 
 Function Get-BasicInfo {
+    Header "Basic Info"
+
     echo "System Info:" > $dump_file
     systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "Hostname:" >> $dump_file
     hostname >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "Current User:" >> $dump_file
     echo $env:UserName >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "Path:" >> $dump_file
     echo $env:path >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "Users:" >> $dump_file
     net users >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "Administrators:" >> $dump_file
     net localgroup Administrators >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "RDP Users:" >> $dump_file
     net localgroup "Remote Desktop Users" >> $dump_file
 
-    Divider
+    SubDivider
 }
 
-Function Get-NetworkInfo{
+Function Get-NetworkInfo {
     echo "Network Information:" > $dump_file
     ipconfig /all >> $dump_file
 
-    Divider
+    SubDivider
 
     echo "Routes:" >> $dump_file
     route print >> $dump_file
     
-    Divider
+    SubDivider
 
     echo "Local Network:" >> $dump_file
     arp -A >> $dump_file
 
-    Divider
+    SubDivider
 
     netstat -ano >> $dump_file
 
-    Divider
+    SubDivider
 
 }
 
-Function Get-FirewallEnum{
+Function Get-FirewallEnum {
 
     echo "Firewall State:"
-    netsh dump_file show state >> $dump_file
+    netsh firewall show state >> $dump_file
 
-    Divider $dump_file
+    SubDivider $dump_file
 
     echo "Firewall Config:" >> $dump_file
-    netsh dump_file show config
+    netsh firewall show config
 }
 
+
+
 Get-BasicInfo
-Get-NetworkInfo
-Get-FirewallEnum
+#Get-NetworkInfo
+#Get-FirewallEnum
 
 
 
