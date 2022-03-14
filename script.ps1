@@ -1,82 +1,78 @@
 # Basic info
+$dump_file = "infodump.txt"
 
 Function Divider {
-    Param ($file)
-    echo "++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++" >> $file
+    echo "++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++=++" >> $dump_file
 }
 
 Function Get-BasicInfo {
-    $basic_info = "basic_info.txt"
-    echo "System Info:" > $basic_info
-    systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $basic_info
+    echo "System Info:" > $dump_file
+    systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $dump_file
 
-    Divider $basic_info
+    Divider
 
-    echo "Hostname:" >> $basic_info
-    hostname >> $basic_info
+    echo "Hostname:" >> $dump_file
+    hostname >> $dump_file
 
-    Divider $basic_info
+    Divider
 
-    echo "Current User:" >> $basic_info
-    echo $env:UserName >> $basic_info
+    echo "Current User:" >> $dump_file
+    echo $env:UserName >> $dump_file
 
-    Divider $basic_info
+    Divider
 
-    echo "Path:" >> $basic_info
-    echo $env:path >> $basic_info
+    echo "Path:" >> $dump_file
+    echo $env:path >> $dump_file
 
-    Divider $basic_info
+    Divider
 
-    echo "Users:" >> $basic_info
-    net users >> $basic_info
+    echo "Users:" >> $dump_file
+    net users >> $dump_file
 
-    Divider $basic_info
+    Divider
 
-    echo "Administrators:" >> $basic_info
-    net localgroup Administrators >> $basic_info
+    echo "Administrators:" >> $dump_file
+    net localgroup Administrators >> $dump_file
 
-    Divider $basic_info
+    Divider
 
-    echo "RDP Users:" >> $basic_info
-    net localgroup "Remote Desktop Users" >> $basic_info
+    echo "RDP Users:" >> $dump_file
+    net localgroup "Remote Desktop Users" >> $dump_file
 
-    Divider $basic_info
+    Divider
 }
 
 Function Get-NetworkInfo{
-    $network_info = "network_information.txt"
+    echo "Network Information:" > $dump_file
+    ipconfig /all >> $dump_file
+
+    Divider
+
+    echo "Routes:" >> $dump_file
+    route print >> $dump_file
     
-    echo "Network Information:" > $network_info
-    ipconfig /all >> $network_info
+    Divider
 
-    Divider $network_info
+    echo "Local Network:" >> $dump_file
+    arp -A >> $dump_file
 
-    echo "Routes:" >> $network_info
-    route print >> $network_info
-    
-    Divider $network_info
+    Divider
 
-    echo "Local Network:" >> $network_info
-    arp -A >> $network_info
+    netstat -ano >> $dump_file
 
-    Divider $network_info
-
-    netstat -ano
-
-    Divider $network_info
+    Divider
 
 }
 
 Function Get-FirewallEnum{
-    $firewall = "firewall_info.txt"
 
     echo "Firewall State:"
-    netsh firewall show state >> $firewall
+    netsh dump_file show state >> $dump_file
 
-    Divider $firewall
+    Divider $dump_file
 
-    echo "Firewall Config:" >> $firewall
-    netsh firewall show config
+    echo "Firewall Config:" >> $dump_file
+    netsh dump_file show config
 }
 
 Get-BasicInfo
