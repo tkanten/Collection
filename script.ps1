@@ -1,12 +1,11 @@
 # Basic info
 $dump_file = "infodump.txt"
-echo " " >> $dump_file
+echo "Made by Trevor Kanten" > $dump_file
 
-Function Header {
+Function SectionHeader {
     Param ($SectionName)
-    echo >> $dump_file
     echo "==============================================================" >> $dump_file
-    echo "SECTION $dump_file" >> $dump_file
+    echo "SECTION $SectionName" >> $dump_file
     echo "==============================================================" >> $dump_file
 
 }
@@ -16,7 +15,7 @@ Function SubDivider {
 }
 
 Function Get-BasicInfo {
-    Header "Basic Info"
+    SectionHeader "Basic Info"
 
     echo "System Info:" > $dump_file
     systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $dump_file
