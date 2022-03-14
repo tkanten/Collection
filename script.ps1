@@ -1,5 +1,5 @@
 # Basic info
-$dump_file = "infodump.txt"
+$dump_file = "infodump"
 
 Function SectionHeader {
     Param ($Section_Name)
