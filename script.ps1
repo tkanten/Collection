@@ -5,7 +5,7 @@ $divider = "--------------------------------------------------------------------
 
 Function Get-BasicInfo {
 $basic_info = "basic_info.txt"
-echo "System Info:" >> $basic_info
+echo "System Info:" > $basic_info
 systeminfo | findstr /B /C:'OS NAME' /C:'OS Version' >> $basic_info
 
 echo $divider >> $basic_info
