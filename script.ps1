@@ -25,5 +25,14 @@ echo $env:path >> $basic_info
 echo $divider >> $basic_info
 
 echo "Users:" >> $basic_info
-echo net users >> $basic_info
+net users >> $basic_info
 
+echo $divider >> $basic_info
+
+echo "Administrators:" >> $basic_info
+net localgroup Administrators >> $basic_info
+
+echo $divider >> $basic_info
+
+echo "RDP Users:" >> $basic_info
+net localgroup "Remote Desktop Users" >> $basic_info
