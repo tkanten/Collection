@@ -105,13 +105,6 @@ Function Get-TaskSchedEnum {
     tasklist /SVC >> $dump_file
 }
 
-
-
-# WIP
-Function Get-SAMDump {
-    SectionHeader "SAM DUMP"
-}
-
 echo "Made by Trevor Kanten" > $dump_file
 Get-BasicInfo
 Get-NetworkInfo
