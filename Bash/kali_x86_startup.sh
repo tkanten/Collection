@@ -3,6 +3,7 @@
 ## TO INSTALL:
 # wget -O kali_startup.sh https://raw.githubusercontent.com/tkanten/Collection/Programs/Bash/kali_startup.sh
 # chmod 777 kali_x86_startup
+# TODOs: remmina
 
 echo "Network driver download? [Y,n]"
 read input
