@@ -204,6 +204,16 @@ if [[ $input == "Y" || $input == "y" ]]; then
     xdg-open https://$HOST:8834
 fi
 
+echo "Install Docker? [Y,n"
+read input
+if [[ $input == "Y" || $input == "y" ]]; then
+    sudo apt update
+    sudo apt install docker.io -y
+    sudo systemctl enable docker --now
+    sudo systemctl enable docker.service
+    sudo usermod -aG docker $USER
+fi
+
 echo "Install Timeshift? [Y,n]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
